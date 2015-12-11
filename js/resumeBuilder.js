@@ -23,7 +23,9 @@ var formattedMobile = HTMLmobile.replace('%data%', bio.mobile);
 var formmattedEmail = HTMLemail.replace('%data%', bio.email);
 var formattedContactGeneric = HTMLcontactGeneric.replace('$data', bio.contact);
 var formattedGithub = HTMLgithub.replace('%data%', bio.github);
-$('#main').append(bio.bioPic, bio.welcomeMsg, formattedMobile, formmattedEmail);
+var formattedLocation = HTMLlocation.replace('%data%', bio.location);
+
+$('#main').append(bio.bioPic, bio.welcomeMsg, formattedMobile, formmattedEmail, formattedGithub, formattedLocation);
 console.log(bio);
 
 
