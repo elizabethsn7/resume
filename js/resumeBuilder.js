@@ -1,12 +1,10 @@
-var name = 'Elizabeth Kipp';
+
 var formattedName = HTMLheaderName.replace('%data%', name);
-
-
-var role = 'Web Developer';
+$('#header').prepend(formattedName)
+var role = 'Web Developer'
 var formattedRole = HTMLheaderRole.replace('%data%', role);
 
 $('#header').prepend(formattedRole);
-$('#header').prepend(formattedName);
 
 var bio = {
 	'name' : 'Elizabeth Kipp',
@@ -17,9 +15,15 @@ var bio = {
 		'github' : 'https://github.com/elizabethsn7',
 		'location' : 'Chicago'
 	},
-	'photo' : 'images/fry.jpg',
-	'message' : 'I was not born with a gift but I learned perserverance',
+	'bioPic' : 'images/fry.jpg',
+	'welcomeMsg' : 'I was not born with a gift but I learned perserverance',
 };
 
-$('#header').prepend(bio);
+var formattedMobile = HTMLmobile.replace('%data%', bio.mobile);
+var formmattedEmail = HTMLemail.replace('%data%', bio.email);
+var formattedContactGeneric = HTMLcontactGeneric.replace('$data', bio.contact);
+var formattedGithub = HTMLgithub.replace('%data%', bio.github);
+$('#main').append(bio.bioPic, bio.welcomeMsg, formattedMobile, formmattedEmail);
 console.log(bio);
+
+
