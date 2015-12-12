@@ -1,10 +1,8 @@
-
-var formattedName = HTMLheaderName.replace('%data%', name);
-$('#header').prepend(formattedName)
 var role = 'Web Developer'
 var formattedRole = HTMLheaderRole.replace('%data%', role);
 
-$('#header').prepend(formattedRole);
+var formattedName = HTMLheaderName.replace('%data%', name);
+$('#header').prepend(formattedName, formattedRole)
 
 var bio = {
 	'name' : 'Elizabeth Kipp',
