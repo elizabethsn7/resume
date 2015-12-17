@@ -22,34 +22,65 @@ var bio = {
 };
 $('#main').append(bio.name);
 
-var work = {}
-work.position = 'Photographer';
-work.employer = 'Elizabeth Kipp Photography';
-work.years = 5;
 
+
+
+//Work Object
+var work = {
+   'jobs': [
+      {
+        'employer': 'Elizabeth Kipp Photography',
+        'title': 'Owner',
+        'location': 'Chicago, Il',
+        'dates': 'February 2011 to present',
+        'description': 'Photographer, Editor, Sales'
+      }
+   ]
+}
+
+//Projects Object
+var projects = {
+   'projects': [
+   {
+     'title': 'portfolio',
+     'dates': 'November 2015',
+     'description': 'first large project completed in the Udacity Nanodegree program. Made use of HTML, CSS, Modals and Bootstrap showcasing my photography and web development skills',
+     'images': 'http://elizabethsn7.github.io/frameworks/test.html'
+   }
+     'titel': 'Wedding Quiz',
+     'dates': 'August 2015',
+     'description': 'Created a quiz app using HTML, CSS, JQuery and JavaScript featuring my wedding photography. I was able to create a landing page as well as a results page.',
+     'images': 'http://elizabethsn7.github.io/Wedding-Quiz/'
+   ]
+}
+
+//Education Object
 var education = {
-   	"schools": [ 
-   	{
-   		"school": "Keller Graduate School of Management",
-   		"location": "Tinley Park, Il",
-   		"degree": "MBA",
-   		"major": ["Marketing"],
-   		"years": 2002
-   	}, 
-   	{
-   	   "name": "Columbia College Chicago",
-   	   "location": "Chicago, Il",
-   	   "degree": "BA",
-   	   "major": ["Photography"]
-   	}
-  	],
-   	"Online Courses": [{
-   		"title": "JavaScript Basics",
-   		"school": "Udacity",
-   		"dates": 2015,
-   		"url": "https//www.udacity.com/course/ud804"
-   	}]
-   } 
+      'schools': [ 
+      {
+         'school': 'Keller Graduate School of Management',
+         'location': 'Tinley Park, Il',
+         'degree': 'MBA',
+         'major': ['Marketing'],
+         'years': 2002
+      }, 
+      {
+         'name': 'Columbia College Chicago',
+         'location': 'Chicago, Il',
+         'degree': 'BA',
+         'major': ['Photography']
+      }
+   ]
+      'Online Courses': [
+      {
+         'title': 'JavaScript Basics',
+         'school': 'Udacity',
+         'dates': 2015,
+         'url': 'https//www.udacity.com/course/ud804'
+      }
+   ]
+} 
+
 
 // $('#main').append(work['position']);
 // $('#main').append(education.name);
