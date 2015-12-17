@@ -17,7 +17,7 @@ var bio = {
 	'pictureURL' : 'images/fry.jpg',
 	'welcomeMsg' : 'I was not born with a gift but I learned perserverance',
 	'skills' : [
-		'Web Developer, Photographer, Momma'
+	'Web Developer, Photographer, Momma'
 	]
 };
 $('#main').append(bio.name);
@@ -33,7 +33,13 @@ var work = {
         'title': 'Owner',
         'location': 'Chicago, Il',
         'dates': 'February 2011 to present',
-        'description': 'Photographer, Editor, Sales'
+        'description': 'Photograph weddings, events as well as product. Full knowledge of Adobe Photoshop, Lightroom and Bridge'
+      }
+      {
+         'employer': 'George Street Photo and Video',
+         'title': 'Lead Photographer',
+         'dates': 'April 2012 to present'
+         'description': 'Lead wedding photographer'
       }
    ]
 }
