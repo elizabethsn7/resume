@@ -34,6 +34,7 @@ if (bio.skills.length > 0) {
 
    var formattedSkill = HTMLskills.replace('%data%', bio.skills[0]);
    $('#skills').append(formattedSkill); 
+
     formattedSkill = HTMLskills.replace('%data%', bio.skills[1]);
    $('#skills').append(formattedSkill); 
 };
@@ -53,9 +54,35 @@ var work = {
         'title': 'Lead Photographer',
         'dates': 'April 2012 to present',
         'description': 'Lead wedding photographer'
+      },
+      {
+        'employer': 'Parker and Evan Kipp',
+        'title': 'Mommala',
+        'location': 'Chicago, IL',
+        'dates': 'March 2006 to Present',
+        'description': 'Cook and clean and take to places. Play with, teach, console and encourage!'
       }
    ],
 };
+for(jobs in work) {
+  console.log(work[jobs]);
+
+  };
+
+// var formattedWorkStart = HTMLworkStart
+var formattedWorkTitle = HTMLworkTitle.replace('%data%', work.title);
+$('#work').append(formattedWorkTitle);
+console.log(formattedWorkTitle);
+
+
+// var formattedWorkTitle = HTMLworkTitle.replace('%data%', work.title[0]);
+// $('#work').append(formattedWorkTitle);
+// var formattedWorkDates = HTMLworkDates
+// var formattedWorkLocation = HTMLworkLocation
+// var formattedWorkDescription = HTMLworkDescription
+
+
+
 
 //Projects Object
 var projects = {
@@ -116,7 +143,7 @@ var education = {
 // var formattedGithub = HTMLgithub.replace('%data%', bio.github);
 // var formattedLocation = HTMLlocation.replace('%data%', bio.location);
 // var formattedTwitter = HTMLtwitter.replace('%data%', bio.twitter);
-var formattedSkills = HTMLskills.replace('%data%', bio.skills);
+// var formattedSkills = HTMLskills.replace('%data%', bio.skills);
 
 // $('#header').append(formattedMobile, formattedGithub, formattedLocation, formattedTwitter, formattedSkills);
 
