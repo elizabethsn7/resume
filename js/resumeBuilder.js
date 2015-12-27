@@ -1,14 +1,9 @@
 // var role = 'Web Developer'
 // var formattedRole = HTMLheaderRole.replace('%data%', role);
-
 // var formattedName = HTMLheaderName.replace('%data%', name);
 // $('#header').prepend(formattedName, formattedRole)
 
 //Bio Object
-
-
-
-
 var bio = {
     'name': 'Elizabeth Kipp',
     'role': 'Wev Developer and Photographer',
@@ -26,10 +21,7 @@ var bio = {
     ]
 };
 
-
-
 if (bio.skills.length > 0) {
-
    $('#header').append(HTMLskillsStart); 
 
    var formattedSkill = HTMLskills.replace('%data%', bio.skills[0]);
@@ -65,23 +57,12 @@ var work = {
    ],
 };
 for(jobs in work) {
-  console.log(work[jobs]);
+  var formattedEmployer = HTMLworkEmployer.replace('%data', jobs.employer);
+  console.log(jobs.employer)
 
-  };
-
-// var formattedWorkStart = HTMLworkStart
-var formattedWorkTitle = HTMLworkTitle.replace('%data%', work.title);
-$('#work').append(formattedWorkTitle);
-console.log(formattedWorkTitle);
-
-
-// var formattedWorkTitle = HTMLworkTitle.replace('%data%', work.title[0]);
-// $('#work').append(formattedWorkTitle);
-// var formattedWorkDates = HTMLworkDates
-// var formattedWorkLocation = HTMLworkLocation
-// var formattedWorkDescription = HTMLworkDescription
-
-
+  $('#work').append(HTMLworkStart);
+  // console.log(work[jobs]);
+};
 
 
 //Projects Object
@@ -135,6 +116,12 @@ var education = {
 // $('#main').append(work['position']);
 // $('#main').append(education.name);
 
+
+
+
+// var formattedWorkDates = HTMLworkDates
+// var formattedWorkLocation = HTMLworkLocation
+// var formattedWorkDescription = HTMLworkDescription
 
 
 // var formattedContacts = HTMLcontactGeneric.replace('%contact%', bio.contacts);
