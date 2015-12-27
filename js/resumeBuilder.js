@@ -44,16 +44,16 @@ var work = {
       {
         'employer': 'George Street Photo and Video',
         'title': 'Lead Photographer',
-        'dates': 'April 2012 to present',
         'location': 'Chicago, Il',
+        'dates': 'April 2012 to present',
         'description': 'Lead wedding photographer'
       },
       {
         'employer': 'Parker and Evan Kipp',
         'title': 'Mommala',
-        'dates': 'March 2006 to Present',
-        'location': 'Chicago, IL',        
-        'description': 'Cook and clean and take to places. Play with, teach, console and encourage!'
+        'location': 'Chicago, IL',  
+        'dates': 'March 2006 to Present',      
+        'description': 'Play with, teach, console and encourage! Cook and clean and take to places.'
       }
    ],
 };
@@ -120,15 +120,6 @@ var education = {
 //$('#main').append(bio.name);
 // $('#main').append(work['position']);
 // $('#main').append(education.name);
-
-
-
-
-// var formattedWorkDates = HTMLworkDates
-// var formattedWorkLocation = HTMLworkLocation
-// var formattedWorkDescription = HTMLworkDescription
-
-
 // var formattedContacts = HTMLcontactGeneric.replace('%contact%', bio.contacts);
 // var formattedMobile = HTMLmobile.replace('%data%', bio.mobile);
 // var formmattedEmail = HTMLemail.replace('%data%', bio.email);
