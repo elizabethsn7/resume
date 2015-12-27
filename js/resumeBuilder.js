@@ -57,6 +57,8 @@ var work = {
       }
    ],
 };
+
+function displayWork() {
 for(job in work.jobs) {
   $('#workExperience').append(HTMLworkStart);
 
@@ -67,7 +69,15 @@ for(job in work.jobs) {
   formattedWorkLocation = HTMLworkLocation.replace('%data%', work.jobs[job].location);
   formattedWorkDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
   $('.work-entry:last').append(formattedEmployerTitle, formattedWorkDates, formattedWorkLocation, formattedWorkDescription);
+}
 };
+displayWork();
+$(document).click(function(loc) {
+  var x = loc.pageX;
+  var y =loc.pageY;
+
+  logClicks(x, y);
+  });
 
 
 //Projects Object
@@ -87,6 +97,7 @@ var projects = {
       }
     ],
 };
+
 
 //Education Object
 var education = {
@@ -115,6 +126,12 @@ var education = {
     }
    ],
 }
+
+$('#main').append(internationalizeButton);
+// function inName = {
+//   var internationalize = bio.name[1].toUpperCase();
+  
+// } 
 
 
 //$('#main').append(bio.name);
