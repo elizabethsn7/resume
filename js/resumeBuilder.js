@@ -45,23 +45,28 @@ var work = {
         'employer': 'George Street Photo and Video',
         'title': 'Lead Photographer',
         'dates': 'April 2012 to present',
+        'location': 'Chicago, Il',
         'description': 'Lead wedding photographer'
       },
       {
         'employer': 'Parker and Evan Kipp',
         'title': 'Mommala',
-        'location': 'Chicago, IL',
         'dates': 'March 2006 to Present',
+        'location': 'Chicago, IL',        
         'description': 'Cook and clean and take to places. Play with, teach, console and encourage!'
       }
    ],
 };
-for(jobs in work) {
-  var formattedEmployer = HTMLworkEmployer.replace('%data', jobs.employer);
-  console.log(jobs.employer)
+for(job in work.jobs) {
+  $('#workExperience').append(HTMLworkStart);
 
-  $('#work').append(HTMLworkStart);
-  // console.log(work[jobs]);
+  var formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[job].employer);
+  formattedWorkTitle = HTMLworkTitle.replace('%data%', work.jobs[job].title);
+  formattedEmployerTitle = formattedEmployer + formattedWorkTitle;
+  formattedWorkDates = HTMLworkDates.replace('%data%', work.jobs[job].dates);
+  formattedWorkLocation = HTMLworkLocation.replace('%data%', work.jobs[job].location);
+  formattedWorkDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
+  $('.work-entry:last').append(formattedEmployerTitle, formattedWorkDates, formattedWorkLocation, formattedWorkDescription);
 };
 
 
