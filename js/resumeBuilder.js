@@ -81,21 +81,42 @@ $(document).click(function(loc) {
 //Projects Object
 
 var projects = {
-  'projects': [{
-    'title': 'portfolio',
-    'dates': 'November 2015',
-    'description': 'first large project completed in the Udacity Nanodegree program. Made use of HTML, CSS, Modals and Bootstrap showcasing my photography and web development skills',
-    'images': 'http://elizabethsn7.github.io/frameworks/test.html'
+  'projects': [
+    {
+      'title': 'Portfolio',
+      'dates': 'November 2015',
+      'description': 'first large project completed in the Udacity Nanodegree program. Made use of HTML, CSS, Modals and Bootstrap showcasing my photography and web development skills',
+      'images': 'http://elizabethsn7.github.io/frameworks/test.html'
   }, {
-    'titel': 'Wedding Quiz',
-    'dates': 'August 2015',
-    'description': 'Created a quiz app using HTML, CSS, JQuery and JavaScript featuring my wedding photography. I was able to create a landing page as well as a results page.',
-    'images': 'http://elizabethsn7.github.io/Wedding-Quiz/'
-  }],
+      'title': 'Wedding Quiz',
+      'dates': 'August 2015',
+      'description': 'Created a quiz app using HTML, CSS, JQuery and JavaScript featuring my wedding photography. I was able to create a landing page as well as a results page.',
+      'images': 'http://elizabethsn7.github.io/Wedding-Quiz/'
+    }
+  ]
+}; 
+
+
+// ** Projects Display **
+
   projects.display = function() {
-    
-  }
-};
+    for(project in projects.projects) {
+    $('#projects').append(HTMLprojectStart);
+  
+    var formattedTitle = HTMLprojectTitle.replace('%data%', projects.projects[project].title);
+    $('.project-entry:last').append(formattedTitle);
+
+    var formattedDates = HTMLprojectDates.replace('%data%', projects.projects[project].dates);
+    $('.project-entry:last').append(formattedDates);
+
+    var formattedDescription = HTMLprojectDescription.replace('%data%', projects.projects[project].description);
+    $('.project-entry:last').append(formattedDescription);
+
+    var formattedImages = HTMLprojectImage.replace('%data%', projects.projects[project].images);
+    $('.project-entry:last').append(formattedImages);
+    };
+  };
+
 
 //Education Object
 var education = {
