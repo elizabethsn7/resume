@@ -1,7 +1,5 @@
-// var role = 'Web Developer'
-// var formattedRole = HTMLheaderRole.replace('%data%', role);
-// var formattedName = HTMLheaderName.replace('%data%', name);
-// $('#header').prepend(formattedName, formattedRole)
+
+
 //Bio Object
 var bio = {
   'name': 'Elizabeth Kipp',
@@ -19,6 +17,12 @@ var bio = {
     'Web Developer', 'Photographer'
   ]
 };
+
+var name = 'Elizabeth Kipp';
+var role = 'Web Developer';
+var formattedRole = HTMLheaderRole.replace('%data%', role);
+var formattedName = HTMLheaderName.replace('%data%', name);
+$('#header').prepend(formattedName, formattedRole);
 
 if (bio.skills.length > 0) {
   $('#header').append(HTMLskillsStart);
@@ -75,6 +79,7 @@ $(document).click(function(loc) {
 });
 
 //Projects Object
+
 var projects = {
   'projects': [{
     'title': 'portfolio',
@@ -87,6 +92,9 @@ var projects = {
     'description': 'Created a quiz app using HTML, CSS, JQuery and JavaScript featuring my wedding photography. I was able to create a landing page as well as a results page.',
     'images': 'http://elizabethsn7.github.io/Wedding-Quiz/'
   }],
+  projects.display = function() {
+    
+  }
 };
 
 //Education Object
@@ -112,20 +120,16 @@ var education = {
   }],
 }
 
-var name = 'Elizabeth Kipp';
-
 function inName(name) {
-  var internationalized = name;
-  names[1] = names[1].toUpperCase();
-  internationalized = names.join(" ");
-
-  return internationalized;
-
-  $('#main').append(internationalizeButton);
+  name = bio.name.trim().split(' ');
+  console.log(name);
+  name[1] = name[1].toUpperCase();
+  name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+  return name[0] + ' ' + name[1];
 }
 
+  $('#main').append(internationalizeButton);
 
-//$('#main').append(bio.name);
 // $('#main').append(work['position']);
 // $('#main').append(education.name);
 // var formattedContacts = HTMLcontactGeneric.replace('%contact%', bio.contacts);
