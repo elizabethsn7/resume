@@ -1,7 +1,7 @@
 //Bio Object
 var bio = {
   'name': 'Elizabeth Kipp',
-  'role': 'Wev Developer and Photographer',
+  'role': 'Web Developer and Photographer',
   'contacts': {
     'mobile': '773-931-4424',
     'email': 'liz@elizabethkipp.com',
@@ -9,26 +9,32 @@ var bio = {
     'twitter': 'https://twitter.com/photogirl1977',
     'location': 'Chicago'
   },
-  'welcomeMsg': 'I was not born with a gift but I learned perserverance',
-  'biopic': '/images/fry.jpg',
+  'welcomeMessage': 'I was not born gifted but I learned perserverance.',
   'skills': [
     'HTML', 'CSS', 'JavaScript', 'JQuery', 'Github', 'Adobe Photoshop and Illustrator'
-  ]
+  ],
+    'biopic': 'images/me.png'
 };
 
+var formattedRole = HTMLheaderRole.replace('%data%', bio.role);
+var formattedName = HTMLheaderName.replace('%data%', bio.name);
 
-var name = 'Elizabeth Kipp';
-var role = 'Web Developer';
-var formattedRole = HTMLheaderRole.replace('%data%', role);
-var formattedName = HTMLheaderName.replace('%data%', name);
+var formattedBioPic = HTMLbioPic.replace('%data%', bio.biopic);
+var formattedWelcomeMsg = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
+
 $('#header').prepend(formattedName, formattedRole);
+$('#header').append(formattedWelcomeMsg);
+$('#header').prepend(formattedBioPic);
 
 function displayBio() {
   for (info in bio.contacts) {
+  var formattedContactGeneric = HTMLcontactGeneric.replace('%contact%', bio.contacts);
+  var formattedMobile = HTMLmobile.replace('%data%', bio.mobile);
+  var formattedEmail = HTMLemail.replace('%data%', bio.email);
+  var formattedGithub = HTMLgithub.replace('%data%', bio.github);
+  var formattedTwitter = HTMLtwitter.replace('%data%', bio.twitter);
+  var formattedLocation = HTMLlocation.replace('%data%', bio.location);  
   $('#header').append(HTMLcontactGeneric);
-
-  var formattedMobile = HTMLmobile.replace('%data%', bio.contacts[mobile]);
-  console.log(mobile);
   };
 };
 
@@ -55,7 +61,7 @@ if (bio.skills.length > 0) {
   $('#skills').append(formattedSkill);
 };
 
-
+displayBio();
 
 
 //Work Object
