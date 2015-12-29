@@ -27,25 +27,21 @@ $('#header').append(formattedWelcomeMsg);
 $('#header').prepend(formattedBioPic);
 
 function displayBio() {
-  for (info in bio.contacts) {
-  var formattedContactGeneric = HTMLcontactGeneric.replace('$data%', bio.contacts[info]);
-  $('#header').append(formattedContactGeneric);
- 
   var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
-  $('#header').append(formattedMobile);
+  $('#topContacts').append(formattedMobile);
 
   var formattedEmail = HTMLemail.replace('%data%', bio.contacts.email);
-  $('#header').append(formattedEmail);
+  $('#topContacts').append(formattedEmail);
 
   var formattedGithub = HTMLgithub.replace('%data%', bio.contacts.github);
-  $('#header').append(formattedGithub);
+  $('#topContacts').append(formattedGithub);
 
   var formattedTwitter = HTMLtwitter.replace('%data%', bio.contacts.twitter);
-  $('#header').append(formattedTwitter);
+  $('#topContacts').append(formattedTwitter);
 
   var formattedLocation = HTMLlocation.replace('%data%', bio.contacts.location);  
-  $('#header').append(formattedLocation);
-  };
+  $('#topContacts').append(formattedLocation);
+ 
 };
 
 if (bio.skills.length > 0) {
