@@ -13,18 +13,18 @@ var bio = {
   'skills': [
     'HTML', 'CSS', 'JavaScript', 'JQuery', 'Github', 'Adobe Photoshop and Illustrator'
   ],
-    'biopic': 'images/me.png'
+    'bioPic': 'images/me.png'
 };
 
 var formattedRole = HTMLheaderRole.replace('%data%', bio.role);
 var formattedName = HTMLheaderName.replace('%data%', bio.name);
 
-var formattedBioPic = HTMLbioPic.replace('%data%', bio.biopic);
+var formattedBioPic = HTMLbioPic.replace('%data%', bio.bioPic);
 var formattedWelcomeMsg = HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage);
 
 $('#header').prepend(formattedName, formattedRole);
 $('#header').append(formattedWelcomeMsg);
-$('#header').prepend(formattedBioPic);
+$('#header').append(formattedBioPic);
 
 function displayBio() {
   var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
