@@ -28,16 +28,25 @@ $('#header').prepend(formattedBioPic);
 
 function displayBio() {
   for (info in bio.contacts) {
-  var formattedContactGeneric = HTMLcontactGeneric.replace('%contact%', bio.contacts);
-  var formattedMobile = HTMLmobile.replace('%data%', bio.mobile);
-  var formattedEmail = HTMLemail.replace('%data%', bio.email);
-  var formattedGithub = HTMLgithub.replace('%data%', bio.github);
-  var formattedTwitter = HTMLtwitter.replace('%data%', bio.twitter);
-  var formattedLocation = HTMLlocation.replace('%data%', bio.location);  
-  $('#header').append(HTMLcontactGeneric);
+  var formattedContactGeneric = HTMLcontactGeneric.replace('$data%', bio.contacts[info]);
+  $('#header').append(formattedContactGeneric);
+ 
+  var formattedMobile = HTMLmobile.replace('%data%', bio.contacts.mobile);
+  $('#header').append(formattedMobile);
+
+  var formattedEmail = HTMLemail.replace('%data%', bio.contacts.email);
+  $('#header').append(formattedEmail);
+
+  var formattedGithub = HTMLgithub.replace('%data%', bio.contacts.github);
+  $('#header').append(formattedGithub);
+
+  var formattedTwitter = HTMLtwitter.replace('%data%', bio.contacts.twitter);
+  $('#header').append(formattedTwitter);
+
+  var formattedLocation = HTMLlocation.replace('%data%', bio.contacts.location);  
+  $('#header').append(formattedLocation);
   };
 };
-
 
 if (bio.skills.length > 0) {
   $('#header').append(HTMLskillsStart);
@@ -115,12 +124,12 @@ var projects = {
     {
       'title': 'Portfolio',
       'dates': 'November 2015',
-      'description': 'first large project completed in the Udacity Nanodegree program. Made use of HTML, CSS, Modals and Bootstrap showcasing my photography and web development skills',
+      'description': 'This is the first large project I completed in the Udacity Front End Wen Developer Nanodegree program. I made use of HTML, CSS, Modals and Bootstrap showcasing my photography and web development skills',
       'images': 'http://elizabethsn7.github.io/frameworks/test.html'
   }, {
       'title': 'Wedding Quiz',
       'dates': 'August 2015',
-      'description': 'Created a quiz app using HTML, CSS, JQuery and JavaScript featuring my wedding photography. I was able to create a landing page as well as a results page.',
+      'description': 'I created a quiz app using HTML, CSS, JQuery and JavaScript featuring my wedding photography. I was able to create a landing page as well as a results page.',
       'images': 'http://elizabethsn7.github.io/Wedding-Quiz/'
     }
   ]
