@@ -117,6 +117,8 @@ var projects = {
   }
 };
 
+projects.display();
+
 //Education Object
 var education = {
   'schools': [{
