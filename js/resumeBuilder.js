@@ -9,12 +9,13 @@ var bio = {
     'twitter': 'https://twitter.com/photogirl1977',
     'location': 'Chicago'
   },
-  'pictureURL': 'images/fry.jpg',
   'welcomeMsg': 'I was not born with a gift but I learned perserverance',
+  'biopic': '/images/fry.jpg',
   'skills': [
-    'Web Developer', 'Photographer'
+    'HTML', 'CSS', 'JavaScript', 'JQuery', 'Github', 'Adobe Photoshop and Illustrator'
   ]
 };
+
 
 var name = 'Elizabeth Kipp';
 var role = 'Web Developer';
@@ -22,15 +23,40 @@ var formattedRole = HTMLheaderRole.replace('%data%', role);
 var formattedName = HTMLheaderName.replace('%data%', name);
 $('#header').prepend(formattedName, formattedRole);
 
+function displayBio() {
+  for (info in bio.contacts) {
+  $('#header').append(HTMLcontactGeneric);
+
+  var formattedMobile = HTMLmobile.replace('%data%', bio.contacts[mobile]);
+  console.log(mobile);
+  };
+};
+
+
 if (bio.skills.length > 0) {
   $('#header').append(HTMLskillsStart);
 
   var formattedSkill = HTMLskills.replace('%data%', bio.skills[0]);
   $('#skills').append(formattedSkill);
 
-  formattedSkill = HTMLskills.replace('%data%', bio.skills[1]);
+  var formattedSkill = HTMLskills.replace('%data%', bio.skills[1]);
+  $('#skills').append(formattedSkill);
+
+  var formattedSkill = HTMLskills.replace('%data%', bio.skills[2]);
+  $('#skills').append(formattedSkill);
+
+  var formattedSkill = HTMLskills.replace('%data%', bio.skills[3]);
+  $('#skills').append(formattedSkill);
+
+  var formattedSkill = HTMLskills.replace('%data%', bio.skills[4]);
+  $('#skills').append(formattedSkill);
+
+  var formattedSkill = HTMLskills.replace('%data%', bio.skills[5]);
   $('#skills').append(formattedSkill);
 };
+
+
+
 
 //Work Object
 var work = {
@@ -60,11 +86,11 @@ function displayWork() {
     $('#workExperience').append(HTMLworkStart);
 
     var formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[job].employer);
-    formattedWorkTitle = HTMLworkTitle.replace('%data%', work.jobs[job].title);
-    formattedEmployerTitle = formattedEmployer + formattedWorkTitle;
-    formattedWorkDates = HTMLworkDates.replace('%data%', work.jobs[job].dates);
-    formattedWorkLocation = HTMLworkLocation.replace('%data%', work.jobs[job].location);
-    formattedWorkDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
+    var formattedWorkTitle = HTMLworkTitle.replace('%data%', work.jobs[job].title);
+    var formattedEmployerTitle = formattedEmployer + formattedWorkTitle;
+    var formattedWorkDates = HTMLworkDates.replace('%data%', work.jobs[job].dates);
+    var formattedWorkLocation = HTMLworkLocation.replace('%data%', work.jobs[job].location);
+    var formattedWorkDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
     $('.work-entry:last').append(formattedEmployerTitle, formattedWorkDates, formattedWorkLocation, formattedWorkDescription);
   }
 };
