@@ -1,5 +1,3 @@
-
-
 //Bio Object
 var bio = {
   'name': 'Elizabeth Kipp',
@@ -96,9 +94,7 @@ var projects = {
   ]
 }; 
 
-
-// ** Projects Display **
-
+  // ** Projects Display **
   projects.display = function() {
     for(project in projects.projects) {
     $('#projects').append(HTMLprojectStart);
@@ -112,11 +108,14 @@ var projects = {
     var formattedDescription = HTMLprojectDescription.replace('%data%', projects.projects[project].description);
     $('.project-entry:last').append(formattedDescription);
 
-    var formattedImages = HTMLprojectImage.replace('%data%', projects.projects[project].images);
-    $('.project-entry:last').append(formattedImages);
-    };
-  };
-
+    if (projects.projects[project].images.length > 0) {
+      for (image in projects.projects[project].images) { 
+        var formattedImage = HTMLprojectImage.replace('%data%', projects.projects[project].images[image]);
+        $('.project-entry:last').append(formattedImage);
+      };
+    }
+  }
+};
 
 //Education Object
 var education = {
@@ -148,22 +147,5 @@ function inName(name) {
   name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
   return name[0] + ' ' + name[1];
 }
-
-  $('#main').append(internationalizeButton);
-
-// $('#main').append(work['position']);
-// $('#main').append(education.name);
-// var formattedContacts = HTMLcontactGeneric.replace('%contact%', bio.contacts);
-// var formattedMobile = HTMLmobile.replace('%data%', bio.mobile);
-// var formmattedEmail = HTMLemail.replace('%data%', bio.email);
-// var formattedGithub = HTMLgithub.replace('%data%', bio.github);
-// var formattedLocation = HTMLlocation.replace('%data%', bio.location);
-// var formattedTwitter = HTMLtwitter.replace('%data%', bio.twitter);
-// var formattedSkills = HTMLskills.replace('%data%', bio.skills);
-
-// $('#header').append(formattedMobile, formattedGithub, formattedLocation, formattedTwitter, formattedSkills);
-
-// $('#header').append(formattedContactGeneric, formattedMobile, formmattedEmail, formattedGithub, formattedLocation, formattedTwitter, formattedSkills);
-
-
+$('#main').append(internationalizeButton);
 
