@@ -26,7 +26,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #A8DBA8;
   line-height: 48px;
   display: inline;
 }
@@ -37,6 +37,7 @@ h2 {
   color: #999;
   line-height: 29px;
   padding: 10px;
+  color: #3B8686;
 }
 
 h3 {
@@ -60,7 +61,16 @@ h5 {
   padding:10px 5%;
 
 }
+h1, #name {
+  font-family: 'Poiret One', cursive;
+  color: #3B8686;
+  font-size: 5em;
+}
 
+h1, #bio {
+  margin-left: 26px;
+  padding-top: 20px;
+}
 
 .date-text {
   font-style: italic;
@@ -128,7 +138,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #0B486B;
 }
 
 .flex-box {
@@ -162,6 +172,8 @@ img {
 
 span {
   padding: 5px;
+  color: red;
+  font-family: 'Poiret One', cursive;
 }
 
 #lets-connect {

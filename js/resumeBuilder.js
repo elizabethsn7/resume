@@ -9,7 +9,7 @@ var bio = {
     'twitter': 'https://twitter.com/photogirl1977',
     'location': 'Chicago'
   },
-  'welcomeMessage': 'I was not born gifted but I learned perserverance.',
+  'welcomeMessage': 'The best way to predict the future is to create it. Peter Drucker ',
   'skills': [
     'HTML', 'CSS', 'JavaScript', 'JQuery', 'Github', 'Adobe Photoshop and Illustrator'
   ],
@@ -121,12 +121,12 @@ var projects = {
       'title': 'Portfolio',
       'dates': 'November 2015',
       'description': 'This is the first large project I completed in the Udacity Front End Wen Developer Nanodegree program. I made use of HTML, CSS, Modals and Bootstrap showcasing my photography and web development skills',
-      'images': 'http://elizabethsn7.github.io/frameworks/test.html'
+      'images': ['images/logo.png', 'images/logo.png']
   }, {
       'title': 'Wedding Quiz',
       'dates': 'August 2015',
       'description': 'I created a quiz app using HTML, CSS, JQuery and JavaScript featuring my wedding photography. I was able to create a landing page as well as a results page.',
-      'images': 'http://elizabethsn7.github.io/Wedding-Quiz/'
+      'images': ['images/wed_1.png', 'images/wed_2.png']
     }
   ]
 }; 
@@ -144,6 +144,11 @@ var projects = {
 
     var formattedDescription = HTMLprojectDescription.replace('%data%', projects.projects[project].description);
     $('.project-entry:last').append(formattedDescription);
+
+    var formattedProjectImage = HTMLprojectImage.replace('%data%', projects.projects[project].images);
+    $('.project-entry:last').append(formattedProjectImage);
+
+
 
     if (projects.projects[project].images.length > 0) {
       for (image in projects.projects[project].images) { 
