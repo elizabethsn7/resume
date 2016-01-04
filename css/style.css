@@ -69,7 +69,7 @@ h1, #name {
 
 h1, #bio {
   margin-left: 26px;
-  padding-top: 20px;
+  padding: 20px 20px;
 }
 
 .date-text {
@@ -115,7 +115,7 @@ a {
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #0B486B;
 }
 
 .orange-text {
@@ -180,8 +180,8 @@ span {
   text-align: center;
 }
 
-#education {
-  background-color: black;
+#education, h2, .gray {
+  background-color: #CFF09E;
 }
 /* Media queries to handle various device widths */
 
