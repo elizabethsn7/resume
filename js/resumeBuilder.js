@@ -106,6 +106,7 @@ function displayWork() {
   }
 };
 displayWork();
+
 $(document).click(function(loc) {
   var x = loc.pageX;
   var y = loc.pageY;
@@ -145,9 +146,8 @@ var projects = {
     var formattedDescription = HTMLprojectDescription.replace('%data%', projects.projects[project].description);
     $('.project-entry:last').append(formattedDescription);
 
-    var formattedProjectImage = HTMLprojectImage.replace('%data%', projects.projects[project].images);
-    $('.project-entry:last').append(formattedProjectImage);
-
+    // var formattedProjectImage = HTMLprojectImage.replace('%data%', projects.projects[project].images);
+    // $('.project-entry:last').append(formattedProjectImage);
 
 
     if (projects.projects[project].images.length > 0) {
@@ -155,34 +155,63 @@ var projects = {
         var formattedImage = HTMLprojectImage.replace('%data%', projects.projects[project].images[image]);
         $('.project-entry:last').append(formattedImage);
       };
-    }
-  }
+    };
+  };
 };
 
 projects.display();
 
 //Education Object
 var education = {
+    'Online Courses': [{
+    'title': 'Front End Nanodegree',
+    'name': 'Udacity',
+    'dates': 2015,
+    'url': 'https//www.udacity.com/course/ud804'
+  }],
+
   'schools': [{
-    'school': 'Keller Graduate School of Management',
+    'name': 'Keller Graduate School of Management',
     'location': 'Tinley Park, Il',
     'degree': 'MBA',
     'major': ['Marketing'],
-    'years': 2002
+    'dates': 2010
   }, {
     'name': 'Columbia College Chicago',
     'location': 'Chicago, Il',
     'degree': 'BA',
-    'major': ['Photography']
+    'major': ['Photography'],
+    'dates': 2002
   }],
 
-  'Online Courses': [{
-    'title': 'Front End Nanodegree',
-    'school': 'Udacity',
-    'dates': 2015,
-    'url': 'https//www.udacity.com/course/ud804'
-  }],
+
 }
+
+
+// Education Display
+function displayEducation() {
+  for (edu in education.schools) {
+    $('#education-entry').append(HTMLschoolStart);
+
+    var formattedSchoolName = HTMLschoolName.replace('%data%', education.schools[edu].name);
+    $('#education').append(formattedSchoolName);
+
+    var formattedSchoolLocation = HTMLschoolLocation.replace('%data%', education.schools[edu].location);
+    $('#education').append(formattedSchoolLocation);
+
+    var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', education.schools[edu].degree);
+    $('#education').append(formattedSchoolDegree);
+
+    var formattedSchoolMajor = HTMLschoolMajor.replace('%data%', education.schools[edu].major);
+    $('#education').append(formattedSchoolMajor);
+
+    var formattedSchoolDates = HTMLschoolDates.replace('%data%', education.schools[edu].dates);
+    $('#education').append(formattedSchoolDates);
+  };
+}
+displayEducation();
+
+
 
 function inName(name) {
   name = bio.name.trim().split(' ');
@@ -190,6 +219,9 @@ function inName(name) {
   name[1] = name[1].toUpperCase();
   name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
   return name[0] + ' ' + name[1];
-}
+};
+
 $('#main').append(internationalizeButton);
+
+$('#mapDiv').append(googleMap);
 

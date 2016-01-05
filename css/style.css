@@ -27,7 +27,6 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #A8DBA8;
   line-height: 95px;
   display: inline;
 }
@@ -38,7 +37,7 @@ h2 {
   color: #999;
   line-height: 29px;
   padding: 10px;
-  color: #3B8686;
+  color: #FC3A51;
 }
 
 h3 {
@@ -62,6 +61,7 @@ h5 {
   padding:10px 5%;
 
 }
+
 h1, #name {
   font-family: 'Poiret One', cursive;
   color: #3B8686;
@@ -76,11 +76,9 @@ h1, #name {
 h1, #bio {
   margin-left: 20px;
   background-color: #E8D5B7;
+  color: #0E2430;
   }
 
-#bio {
-   background-color: #E8D5B7;
-}
 
 .flex-item {
   background-color: #0E2430;
@@ -118,7 +116,7 @@ a {
 
 .welcome-message {
   font-style: italic;
-  font-size: 18px;
+  font-size: 1.5em;
   color: #f3f3f3;
   line-height: 28px;
 }
@@ -126,8 +124,9 @@ a {
 #topContacts {
   background-color: #0E2430;
 }
+
 #skills-h3 {
-  color: #f5ae23;
+  color: #F5B349;
   display: none;
   margin-left: -20px;
 }
@@ -137,7 +136,7 @@ a {
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #F5B349;
 }
 
 .white-text {
