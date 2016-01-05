@@ -12,7 +12,8 @@ h6 {
   padding:0;
   margin:0;
   font-family: "Roboto", sans-serif;
-}
+  background-color: #E8D5B7;
+ }
 
 .clear-fix {
   overflow: auto;
@@ -27,7 +28,7 @@ h6 {
 h1 {
   font-size: 40px;
   color: #A8DBA8;
-  line-height: 48px;
+  line-height: 95px;
   display: inline;
 }
 
@@ -65,11 +66,24 @@ h1, #name {
   font-family: 'Poiret One', cursive;
   color: #3B8686;
   font-size: 5em;
+  background-color: #0E2430;
+}
+
+.flex-box, #skills-h3 {
+  background-color: #0E2430;
 }
 
 h1, #bio {
-  margin-left: 26px;
-  padding: 20px 20px;
+  margin-left: 20px;
+  background-color: #E8D5B7;
+  }
+
+#bio {
+   background-color: #E8D5B7;
+}
+
+.flex-item {
+  background-color: #0E2430;
 }
 
 .date-text {
@@ -109,9 +123,13 @@ a {
   line-height: 28px;
 }
 
+#topContacts {
+  background-color: #0E2430;
+}
 #skills-h3 {
   color: #f5ae23;
   display: none;
+  margin-left: -20px;
 }
 
 .orange {
@@ -138,7 +156,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #0B486B;
+  background-color: #0E2430;
 }
 
 .flex-box {
@@ -159,7 +177,7 @@ ul {
 }
 
 .biopic {
-  float: left;
+  float: right;
   padding: 10px;
   width: 200px;
   display: none;
@@ -180,9 +198,9 @@ span {
   text-align: center;
 }
 
-#education, h2, .gray {
+/*#education, h2, .gray {
   background-color: #CFF09E;
-}
+}*/
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
