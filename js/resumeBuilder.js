@@ -124,7 +124,7 @@ var projects = {
       'description': 'This is the first large project I completed in the Udacity Front End Wen Developer Nanodegree program. I made use of HTML, CSS, Modals and Bootstrap showcasing my photography and web development skills.',
       'images': ['images/logo.png']
   }, {
-      'title': 'Wedding Quiz',
+      'title': 'Modern, Timeless, Romantic or Glam Wedding Quiz',
       'dates': 'August 2015',
       'description': 'I created a quiz app using HTML, CSS, JQuery and JavaScript featuring my wedding photography. I was able to create a landing page as well as a results page.',
       'images': ['images/projects-img-1.jpg', 'images/projects-img-2.jpg', 'images/projects-img-3.jpg', 'images/projects-img-4.jpg' ]
@@ -187,22 +187,20 @@ var education = {
 // Education Display
 function displayEducation() {
   for (edu in education.schools) {
-    $('#education-entry').append(HTMLschoolStart);
+    $('#education').append(HTMLschoolStart);
 
     var formattedSchoolName = HTMLschoolName.replace('%data%', education.schools[edu].name);
-    $('#education').append(formattedSchoolName);
-
     var formattedSchoolLocation = HTMLschoolLocation.replace('%data%', education.schools[edu].location);
-    $('#education').append(formattedSchoolLocation);
-
     var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', education.schools[edu].degree);
-    $('#education').append(formattedSchoolDegree);
-
-    var formattedSchoolMajor = HTMLschoolMajor.replace('%data%', education.schools[edu].major);
-    $('#education').append(formattedSchoolMajor);
-
     var formattedSchoolDates = HTMLschoolDates.replace('%data%', education.schools[edu].dates);
-    $('#education').append(formattedSchoolDates);
+
+    $('.education-entry').append(formattedSchoolName, formattedSchoolLocation, formattedSchoolDegree, formattedSchoolDates);
+
+    if(education.schools[edu].major.length > 0) {
+      for (majors in education.schools[edu].major) {
+        var formattedSchoolMajor = HTMLschoolMajor.replace('%data%', education.schools[edu].major);
+      }
+    }
   };
 }
 displayEducation();
