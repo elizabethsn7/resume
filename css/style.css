@@ -25,6 +25,10 @@ h6 {
   padding: 0 5%;
 }
 
+.work-entry, a {
+  color: orange;
+}
+
 h1 {
   font-size: 40px;
   line-height: 95px;
@@ -110,7 +114,6 @@ p {
 a {
   color: #1199c3;
   text-decoration: none;
-  margin-top: 10px;
   display: block;
 }
 
@@ -145,7 +148,6 @@ a {
 
 .gray {
   background-color: #f3f3f3;
-  padding-bottom: 10px;
   clear:both;
 }
 
@@ -178,7 +180,7 @@ ul {
 .biopic {
   float: right;
   padding: 10px;
-  width: 200px;
+  width: 150px;
   display: none;
   border-radius: 50%;
 }

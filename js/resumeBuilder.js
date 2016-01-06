@@ -121,13 +121,13 @@ var projects = {
     {
       'title': 'Portfolio',
       'dates': 'November 2015',
-      'description': 'This is the first large project I completed in the Udacity Front End Wen Developer Nanodegree program. I made use of HTML, CSS, Modals and Bootstrap showcasing my photography and web development skills',
-      'images': ['images/logo.png', 'images/logo.png']
+      'description': 'This is the first large project I completed in the Udacity Front End Wen Developer Nanodegree program. I made use of HTML, CSS, Modals and Bootstrap showcasing my photography and web development skills.',
+      'images': ['images/logo.png']
   }, {
       'title': 'Wedding Quiz',
       'dates': 'August 2015',
       'description': 'I created a quiz app using HTML, CSS, JQuery and JavaScript featuring my wedding photography. I was able to create a landing page as well as a results page.',
-      'images': ['images/wed_1.png', 'images/wed_2.png']
+      'images': ['images/projects-img-1.jpg', 'images/projects-img-2.jpg', 'images/projects-img-3.jpg', 'images/projects-img-4.jpg' ]
     }
   ]
 }; 
@@ -145,10 +145,6 @@ var projects = {
 
     var formattedDescription = HTMLprojectDescription.replace('%data%', projects.projects[project].description);
     $('.project-entry:last').append(formattedDescription);
-
-    // var formattedProjectImage = HTMLprojectImage.replace('%data%', projects.projects[project].images);
-    // $('.project-entry:last').append(formattedProjectImage);
-
 
     if (projects.projects[project].images.length > 0) {
       for (image in projects.projects[project].images) { 
