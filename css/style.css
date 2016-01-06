@@ -37,11 +37,12 @@ h1 {
 
 h2 {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 26px;
   color: #999;
   line-height: 29px;
-  padding: 10px;
-  color: #FC3A51;
+  padding-top: 30px;
+  color: red;
+  font-family: 'Poiret One', cursive;
 }
 
 h3 {
@@ -115,6 +116,7 @@ a {
   color: #1199c3;
   text-decoration: none;
   display: block;
+  color: #0E2430;
 }
 
 .welcome-message {
