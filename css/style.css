@@ -150,6 +150,7 @@ a {
 .gray {
   background-color: #f3f3f3;
   clear:both;
+  padding-bottom: 15px;
 }
 
 .dark-gray {

@@ -159,30 +159,31 @@ projects.display();
 
 //Education Object
 var education = {
-    'Online Courses': [{
-    'title': 'Front End Nanodegree',
-    'name': 'Udacity',
-    'dates': 2015,
-    'url': 'https//www.udacity.com/course/ud804'
-  }],
-
-  'schools': [{
+  'schools': [
+  {
     'name': 'Keller Graduate School of Management',
     'location': 'Tinley Park, Il',
     'degree': 'MBA',
     'major': ['Marketing'],
-    'dates': 2010
-  }, {
+    'dates': 'June 2010'
+  }, 
+  {
     'name': 'Columbia College Chicago',
     'location': 'Chicago, Il',
     'degree': 'BA',
     'major': ['Photography'],
-    'dates': 2002
-  }],
-
-
+    'dates': 'June 2002'
+  }
+  ],
+    'Online Courses': [
+    {
+    'title': 'Front End Nanodegree',
+    'name': 'Udacity',
+    'dates': 'September 2015',
+    'url': 'https//www.udacity.com/course/ud804'
+  }
+  ],
 }
-
 
 // Education Display
 function displayEducation() {
