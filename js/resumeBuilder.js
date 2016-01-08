@@ -175,10 +175,10 @@ var education = {
     'dates': 'June 2002'
   }
   ],
-    'Online Courses': [
+    'onlineCourses': [
     {
     'title': 'Front End Nanodegree',
-    'name': 'Udacity',
+    'school': 'Udacity',
     'dates': 'September 2015',
     'url': 'https//www.udacity.com/course/ud804'
   }
@@ -200,9 +200,19 @@ function displayEducation() {
     if(education.schools[edu].major.length > 0) {
       for (majors in education.schools[edu].major) {
         var formattedSchoolMajor = HTMLschoolMajor.replace('%data%', education.schools[edu].major);
-      }
-    }
+      };
+    };
   };
+
+  for (onlineCourse in education.onlineCourses) {
+    $('#education').append(HTMLonlineClasses);
+
+    var formattedOnlineTitle = HTMLonlineTitle.replace('%data%', education.onlineCourses[onlineCourse].title);
+    var formattedOnlineSchool = HTMLonlineSchool.replace('%data%', education.onlineCourses[onlineCourse].school); 
+    var formattedOnlineDates = HTMLonlineDates.replace('%data%', education.onlineCourses[onlineCourse].dates);
+    var formattedOnlineURL = HTMLonlineURL.replace('%data%', education.onlineCourses[onlineCourse].url);
+    $('.education-entry:last').append(formattedOnlineTitle, formattedOnlineSchool, formattedOnlineDates, formattedOnlineURL);
+  };  
 }
 displayEducation();
 
@@ -219,4 +229,34 @@ function inName(name) {
 $('#main').append(internationalizeButton);
 
 $('#mapDiv').append(googleMap);
+
+// if (education.onlineCourses.length > 0) {
+//   for (onlineCourse in education.onlineCourses) {
+//     
+//   };
+//   $('#education').append(HTMLonlineClasses);
+// };
+
+// displayEducation();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
