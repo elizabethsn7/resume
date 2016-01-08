@@ -41,7 +41,12 @@ function displayBio() {
 
   var formattedLocation = HTMLlocation.replace('%data%', bio.contacts.location);  
   $('#topContacts').append(formattedLocation);
- 
+  $("#footerContacts").append(HTMLmobile.replace("%data%", bio.contacts.mobile))
+            .append(HTMLemail.replace("%data%", bio.contacts.email))
+            .append(HTMLgithub.replace("%data%", bio.contacts.github))
+            .append(HTMLtwitter.replace("%data%", bio.contacts.twitter))
+            .append(HTMLlocation.replace("%data%", bio.contacts.location));
+
 };
 
 if (bio.skills.length > 0) {

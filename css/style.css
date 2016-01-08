@@ -137,7 +137,7 @@ a {
 }
 
 .orange {
-  background-color: #0B486B;
+  background-color: #0E2430;
 }
 
 .orange-text {
@@ -203,6 +203,9 @@ span {
   text-align: center;
 }
 
+#lets-connect h2 {
+  color: #F5B349;
+}
 
 /* Media queries to handle various device widths */
 
