@@ -212,14 +212,13 @@ function displayEducation() {
     var formattedOnlineDates = HTMLonlineDates.replace('%data%', education.onlineCourses[onlineCourse].dates);
     var formattedOnlineURL = HTMLonlineURL.replace('%data%', education.onlineCourses[onlineCourse].url);
     $('#education:last').append(formattedOnlineTitle, formattedOnlineSchool, formattedOnlineDates, formattedOnlineURL);
+
   if(education.onlineCourses[onlineCourse].length > 0 ) {
-    
+    $('.education-entry:last').append(HTMLonlineClasses)
   };    
   };  
 }
 displayEducation();
-
-
 
 function inName(name) {
   name = bio.name.trim().split(' ');
@@ -232,34 +231,3 @@ function inName(name) {
 $('#main').append(internationalizeButton);
 
 $('#mapDiv').append(googleMap);
-
-// if (education.onlineCourses.length > 0) {
-//   for (onlineCourse in education.onlineCourses) {
-//     
-//   };
-//   $('#education').append(HTMLonlineClasses);
-// };
-
-// displayEducation();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
