@@ -122,7 +122,7 @@ var projects = {
       'title': 'Portfolio',
       'dates': 'November 2015',
       'description': 'This is the first large project I completed in the Udacity Front End Wen Developer Nanodegree program. I made use of HTML, CSS, Modals and Bootstrap showcasing my photography and web development skills.',
-      'images': ['images/logo.png']
+      'images': ['images/logo.png', 'images/shoes.png', 'images/lifestyle.png', 'images/product.png']
   }, {
       'title': 'Modern, Timeless, Romantic or Glam Wedding Quiz',
       'dates': 'August 2015',
