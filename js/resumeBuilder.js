@@ -164,14 +164,14 @@ var education = {
     'name': 'Keller Graduate School of Management',
     'location': 'Tinley Park, Il',
     'degree': 'MBA',
-    'major': ['Marketing'],
+    'major': 'Marketing',
     'dates': 'June 2010'
   }, 
   {
     'name': 'Columbia College Chicago',
     'location': 'Chicago, Il',
     'degree': 'BA',
-    'major': ['Photography'],
+    'major': 'Photography',
     'dates': 'June 2002'
   }
   ],
@@ -184,41 +184,42 @@ var education = {
   }
   ],
 }
-
-// Education Display
-function displayEducation() {
-  for (edu in education.schools) {
+education.display = function() {
+  var schoolsLength = education.schools.length;
+  for (var i = 0; i < schoolsLength; i++) {
     $('#education').append(HTMLschoolStart);
-
-    var formattedSchoolName = HTMLschoolName.replace('%data%', education.schools[edu].name);
-    var formattedSchoolLocation = HTMLschoolLocation.replace('%data%', education.schools[edu].location);
-    var formattedSchoolDegree = HTMLschoolDegree.replace('%data%', education.schools[edu].degree);
-    var formattedSchoolDates = HTMLschoolDates.replace('%data%', education.schools[edu].dates);
-
-    $('.education-entry').append(formattedSchoolName, formattedSchoolLocation, formattedSchoolDegree, formattedSchoolDates);
-
-    if(education.schools[edu].major.length > 0) {
-      for (majors in education.schools[edu].major) {
-        var formattedSchoolMajor = HTMLschoolMajor.replace('%data%', education.schools[edu].major);
-      };
-    };
-  };
-
-  for (onlineCourse in education.onlineCourses) {
+    var formattedName = HTMLschoolName.replace('%data%',education.schools[i].name);
+    var formattedDegree = HTMLschoolDegree.replace('%data%',education.schools[i].degree);
+    var formattedSchoolDegree = formattedName + formattedDegree;
+    var formattedDates = HTMLschoolDates.replace('%data%',education.schools[i].dates);
+    var formattedMajor = HTMLschoolMajor.replace('%data%',education.schools[i].majors);
+    var formattedURL = HTMLonlineURL.replace('%data%',education.schools[i].url);
+    var formattedLinkedURL = formattedURL.replace('#',education.schools[i].url);
+    var formattedLocation = HTMLschoolLocation.replace('%data%',education.schools[i].location);
+    $('.education-entry:last').append(formattedSchoolDegree)
+      .append(formattedDates)
+      .append(formattedMajor)
+      .append(formattedLinkedURL)
+      .append(formattedLocation);
+  }
+  if (education.onlineCourses.length >0) {
     $('#education').append(HTMLonlineClasses);
-
-    var formattedOnlineTitle = HTMLonlineTitle.replace('%data%', education.onlineCourses[onlineCourse].title);
-    var formattedOnlineSchool = HTMLonlineSchool.replace('%data%', education.onlineCourses[onlineCourse].school); 
-    var formattedOnlineDates = HTMLonlineDates.replace('%data%', education.onlineCourses[onlineCourse].dates);
-    var formattedOnlineURL = HTMLonlineURL.replace('%data%', education.onlineCourses[onlineCourse].url);
-    $('#education:last').append(formattedOnlineTitle, formattedOnlineSchool, formattedOnlineDates, formattedOnlineURL);
-
-  if(education.onlineCourses[onlineCourse].length > 0 ) {
-    $('.education-entry:last').append(HTMLonlineClasses)
-  };    
-  };  
-}
-displayEducation();
+    var onlineCoursesLength = education.onlineCourses.length;
+    for (i = 0; i < onlineCoursesLength; i++) {
+      $('#education').append(HTMLschoolStart);
+      var formattedTitle = HTMLonlineTitle.replace('%data%',education.onlineCourses[i].title);
+      var formattedonlineSchool = HTMLonlineSchool.replace('%data%',education.onlineCourses[i].school);
+      var formattedTitelonlineSchool = formattedTitle + formattedonlineSchool;
+      var formattedOnlineDates = HTMLonlineDates.replace('%data%',education.onlineCourses[i].dates);
+      var formattedOnlineURL = HTMLonlineURL.replace('%data%','Visit Website');
+      var formattedOnlineLinkedURL = formattedOnlineURL.replace('#',education.onlineCourses[i].url);
+      $('.education-entry:last').append(formattedTitelonlineSchool)
+        .append(formattedOnlineDates)
+        .append(formattedOnlineLinkedURL);
+    }
+  }
+};
+education.display();
 
 function inName(name) {
   name = bio.name.trim().split(' ');

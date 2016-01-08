@@ -21,7 +21,7 @@ h6 {
 .education-entry,
 .work-entry,
 .project-entry {
-  padding: 0 5%;
+  padding: 6px 5%;
 }
 
 .work-entry, a {
@@ -121,8 +121,8 @@ a {
 .welcome-message {
   font-style: italic;
   font-size: 1.5em;
-  color: #f3f3f3;
   line-height: 28px;
+  color: #f3f3f3;
 }
 
 #topContacts {
@@ -133,6 +133,7 @@ a {
   color: #F5B349;
   display: none;
   margin-left: -20px;
+  padding-top: 35px;
 }
 
 .orange {
@@ -196,6 +197,7 @@ span {
   color: red;
   font-family: 'Poiret One', cursive;
 }
+
 
 #lets-connect {
   text-align: center;
