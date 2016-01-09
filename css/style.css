@@ -14,6 +14,13 @@ h6 {
     font-family: "Roboto", sans-serif;
 }
 
+button {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    background-color: #F5B349;
+    font-size: 1em;
+}
+
 .clear-fix {
     overflow: auto;
 }
