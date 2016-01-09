@@ -9,245 +9,243 @@ h3,
 h4,
 h5,
 h6 {
-  padding:0;
-  margin:0;
-  font-family: "Roboto", sans-serif;
- }
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
 
 .clear-fix {
-  overflow: auto;
+    overflow: auto;
 }
 
 .education-entry,
 .work-entry,
 .project-entry {
-  padding: 6px 5%;
+    padding: 6px 5%;
 }
 
 .work-entry, a {
-  color: orange;
+    color: orange;
 }
 
 h1 {
-  font-size: 40px;
-  line-height: 95px;
-  display: inline;
+    font-size: 40px;
+    line-height: 95px;
+    display: inline;
 }
 
 h2 {
-  font-weight: bold;
-  font-size: 26px;
-  color: #999;
-  line-height: 29px;
-  padding-top: 30px;
-  color: red;
-  font-family: 'Poiret One', cursive;
+    font-weight: bold;
+    font-size: 26px;
+    color: #999;
+    line-height: 29px;
+    padding-top: 30px;
+    color: red;
+    font-family: 'Poiret One', cursive;
 }
 
 h3 {
-  font-style: italic;
-  font-size: 20px;
-  color: #000;
-  line-height: 22px;
+    font-style: italic;
+    font-size: 20px;
+    color: #000;
+    line-height: 22px;
 }
 
 h4 {
-  font-weight: bold;
-  font-size: 14px;
-  color: #4a4a4a;
-  line-height: 17px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #4a4a4a;
+    line-height: 17px;
 }
 
 h2,
 h3,
 h4,
 h5 {
-  padding:10px 5%;
-
+    padding: 10px 5%;
 }
 
 h1, #name {
-  font-family: 'Poiret One', cursive;
-  color: #3B8686;
-  font-size: 5em;
-  background-color: #0E2430;
+    font-family: 'Poiret One', cursive;
+    color: #3B8686;
+    font-size: 5em;
+    background-color: #0E2430;
 }
 
 .flex-box, #skills-h3 {
-  background-color: #0E2430;
+    background-color: #0E2430;
 }
 
 h1, #bio {
-  margin-left: 20px;
-  background-color: #E8D5B7;
-  color: #0E2430;
-  }
-
+    margin-left: 20px;
+    background-color: #E8D5B7;
+    color: #0E2430;
+}
 
 .flex-item {
-  background-color: #0E2430;
+    background-color: #0E2430;
 }
 
 .date-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: left;
+    font-style: italic;
+    font-size: 14px;
+    color: #999;
+    line-height: 16px;
+    float: left;
 }
 
 .location-text {
-  font-style: italic;
-  font-size: 14px;
-  color: #999;
-  line-height: 16px;
-  float: right;
-
+    font-style: italic;
+    font-size: 14px;
+    color: #999;
+    line-height: 16px;
+    float: right;
 }
 
 p {
-  font-size: 14px;
-  color: #333;
-  line-height: 21px;
+    font-size: 14px;
+    color: #333;
+    line-height: 21px;
 }
 
 a {
-  color: #1199c3;
-  text-decoration: none;
-  display: block;
-  color: #0E2430;
+    color: #1199c3;
+    text-decoration: none;
+    display: block;
+    color: #0E2430;
 }
 
 .welcome-message {
-  font-style: italic;
-  font-size: 1.5em;
-  line-height: 28px;
-  color: #f3f3f3;
+    font-style: italic;
+    font-size: 1.5em;
+    line-height: 28px;
+    color: #f3f3f3;
 }
 
 #topContacts {
-  background-color: #0E2430;
+    background-color: #0E2430;
 }
 
 #skills-h3 {
-  color: #F5B349;
-  display: none;
-  margin-left: -20px;
-  padding-top: 35px;
+    color: #F5B349;
+    display: none;
+    margin-left: -20px;
+    padding-top: 35px;
 }
 
 .orange {
-  background-color: #0E2430;
+    background-color: #0E2430;
 }
 
 .orange-text {
-  color: #F5B349;
+    color: #F5B349;
 }
 
 .white-text {
-  color: #fff;
+    color: #fff;
 }
 
 .gray {
-  background-color: #f3f3f3;
-  clear:both;
-  padding-bottom: 15px;
+    background-color: #f3f3f3;
+    clear: both;
+    padding-bottom: 15px;
 }
 
 .dark-gray {
-  background-color: #4a4a4a;
+    background-color: #4a4a4a;
 }
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #0E2430;
+    background-color: #0E2430;
 }
 
 .flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
 }
 
 .center-content {
-  padding: 2.5% 5%;
+    padding: 2.5% 5%;
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .biopic {
-  float: right;
-  padding: 10px;
-  width: 150px;
-  display: none;
-  border-radius: 50%;
+    float: right;
+    padding: 10px;
+    width: 150px;
+    display: none;
+    border-radius: 50%;
 }
 
 img {
-  padding: 10px;
+    padding: 10px;
 }
 
 span {
-  padding: 5px;
-  color: red;
-  font-family: 'Poiret One', cursive;
+    padding: 5px;
+    color: red;
+    font-family: 'Poiret One', cursive;
 }
 
-
 #lets-connect {
-  text-align: center;
+    text-align: center;
 }
 
 #lets-connect h2 {
-  color: #F5B349;
+    color: #F5B349;
 }
 
 /* Media queries to handle various device widths */
 
 @media only screen and (max-width: 1024px) {
-  #lets-connect {
-    margin-top: 5%;
-  }
+    #lets-connect {
+        margin-top: 5%;
+    };
 }
 
 @media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
+    .biopic {
+        width: 175px;
+    };
 }
 
 @media only screen and (max-width: 750px) {
-  #lets-connect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
+    #lets-connect {
+        margin-top: 10%;
+    }
+
+    .biopic {
+        width: 150px;
+    }
+
+    .welcome-message {
+        display: none;
+    };
 }
 
 #map {
-  display: block;
-  height: 100%;
-  margin: 0 5%;
+    display: block;
+    height: 100%;
+    margin: 0 5%;
 }
 
 #mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
+    height: 400px;
+    width: 100%;
+    padding-bottom: 5%;
 }
 
 @media only screen and (min-width: 750px) {
-  #skills-h3,
+    #skills-h3,
   .biopic {
-    display: block;
-  }
+        display: block;
+    };
 }
