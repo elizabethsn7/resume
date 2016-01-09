@@ -173,13 +173,15 @@ var education = {
     'location': 'Tinley Park, Il',
     'degree': 'MBA',
     'major': 'Marketing',
-    'dates': 'June 2010'
+    'dates': 'June 2010',
+    'url': 'https//www.keller.edu'
   }, {
     'name': 'Columbia College Chicago',
     'location': 'Chicago, Il',
     'degree': 'BA',
     'major': 'Photography',
-    'dates': 'June 2002'
+    'dates': 'June 2002',
+    'url': 'https//www.colum.edu'
   }],
   'onlineCourses': [{
     'title': 'Front End Nanodegree',
@@ -213,11 +215,12 @@ education.display = function() {
       $('#education').append(HTMLschoolStart);
       var formattedTitle = HTMLonlineTitle.replace('%data%', education.onlineCourses[i].title);
       var formattedonlineSchool = HTMLonlineSchool.replace('%data%', education.onlineCourses[i].school);
-      var formattedTitelonlineSchool = formattedTitle + formattedonlineSchool;
+      var formattedTitleonlineSchool = formattedTitle + formattedonlineSchool;
       var formattedOnlineDates = HTMLonlineDates.replace('%data%', education.onlineCourses[i].dates);
       var formattedOnlineURL = HTMLonlineURL.replace('%data%', 'Visit Website');
       var formattedOnlineLinkedURL = formattedOnlineURL.replace('#', education.onlineCourses[i].url);
-      $('.education-entry:last').append(formattedTitelonlineSchool)
+      
+      $('.education-entry:last').append(formattedTitleonlineSchool)
         .append(formattedOnlineDates)
         .append(formattedOnlineLinkedURL);
     }
