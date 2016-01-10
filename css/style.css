@@ -14,13 +14,6 @@ h6 {
     font-family: "Roboto", sans-serif;
 }
 
-button {
-    margin-top: 5px;
-    margin-bottom: 20px;
-    background-color: #F5B349;
-    font-size: 1em;
-}
-
 .clear-fix {
     overflow: auto;
 }
@@ -74,23 +67,23 @@ h5 {
 
 h1, #name {
     font-family: 'Poiret One', cursive;
-    color: #3B8686;
+    color: #3b8686;
     font-size: 5em;
-    background-color: #0E2430;
+    background-color: #0e2430;
 }
 
 .flex-box, #skills-h3 {
-    background-color: #0E2430;
+    background-color: #0e2430;
 }
 
 h1, #bio {
     margin-left: 20px;
-    background-color: #E8D5B7;
-    color: #0E2430;
+    background-color: #e8d5b7;
+    color: #0e2430;
 }
 
 .flex-item {
-    background-color: #0E2430;
+    background-color: #0e2430;
 }
 
 .date-text {
@@ -119,7 +112,7 @@ a {
     color: #1199c3;
     text-decoration: none;
     display: block;
-    color: #0E2430;
+    color: #0e2430;
 }
 
 .welcome-message {
@@ -130,22 +123,22 @@ a {
 }
 
 #topContacts {
-    background-color: #0E2430;
+    background-color: #0e2430;
 }
 
 #skills-h3 {
-    color: #F5B349;
+    color: #f5b349;
     display: none;
     margin-left: -20px;
     padding-top: 35px;
 }
 
 .orange {
-    background-color: #0E2430;
+    background-color: #0e2430;
 }
 
 .orange-text {
-    color: #F5B349;
+    color: #f5b349;
 }
 
 .white-text {
@@ -164,7 +157,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-    background-color: #0E2430;
+    background-color: #0e2430;
 }
 
 .flex-box {
@@ -207,7 +200,7 @@ span {
 }
 
 #lets-connect h2 {
-    color: #F5B349;
+    color: #f5b349;
 }
 
 /* Media queries to handle various device widths */
