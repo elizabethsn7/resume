@@ -13,10 +13,8 @@ var bio = {
   'skills': [
     'HTML', 'CSS', 'JavaScript', 'JQuery', 'Github', 'Adobe Photoshop and Illustrator'
   ],
-  'bioPic': 'images/me.png'
+  'biopic': 'images/me.png'
 };
-
-
 
 function displayBio() {
   var formattedBioPic = HTMLbioPic.replace('%data%', bio.bioPic);
@@ -172,14 +170,14 @@ var education = {
     'name': 'Keller Graduate School of Management',
     'location': 'Tinley Park, Il',
     'degree': 'MBA',
-    'major': 'Marketing',
+    'majors': 'Marketing',
     'dates': 'June 2010',
     'url': 'https//www.keller.edu'
   }, {
     'name': 'Columbia College Chicago',
     'location': 'Chicago, Il',
     'degree': 'BA',
-    'major': 'Photography',
+    'majors': 'Photography',
     'dates': 'June 2002',
     'url': 'https//www.colum.edu'
   }],
@@ -198,7 +196,7 @@ education.display = function() {
     var formattedDegree = HTMLschoolDegree.replace('%data%', education.schools[i].degree);
     var formattedSchoolDegree = formattedName + formattedDegree;
     var formattedDates = HTMLschoolDates.replace('%data%', education.schools[i].dates);
-    var formattedMajor = HTMLschoolMajor.replace('%data%', education.schools[i].major);
+    var formattedMajor = HTMLschoolMajor.replace('%data%', education.schools[i].majors);
     var formattedURL = HTMLonlineURL.replace('%data%', education.schools[i].url);
     var formattedLinkedURL = formattedURL.replace('#', education.schools[i].url);
     var formattedLocation = HTMLschoolLocation.replace('%data%', education.schools[i].location);
