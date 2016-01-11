@@ -136,7 +136,6 @@ var projects = {
   }]
 }
 
-// ** Projects Display **
 projects.display = function() {
   for (var project in projects.projects) {
     if (projects.projects.hasOwnProperty(project)) {
