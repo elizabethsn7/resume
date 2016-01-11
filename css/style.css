@@ -41,7 +41,7 @@ h2 {
     line-height: 29px;
     padding-top: 30px;
     color: red;
-    font-family: 'Poiret One', cursive;
+    font-family: "Poiret One", cursive;
 }
 
 h3 {
@@ -66,7 +66,7 @@ h5 {
 }
 
 h1, #name {
-    font-family: 'Poiret One', cursive;
+    font-family: "Poiret One", cursive;
     color: #3b8686;
     font-size: 5em;
     background-color: #0e2430;
@@ -192,7 +192,7 @@ img {
 span {
     padding: 5px;
     color: red;
-    font-family: 'Poiret One', cursive;
+    font-family: "Poiret One", cursive;
 }
 
 #lets-connect {
