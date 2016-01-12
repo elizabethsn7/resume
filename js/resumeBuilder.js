@@ -94,7 +94,7 @@ var work = {
   }],
 }
 
-function displayWork() {
+work.display = function () {
   for (var job in work.jobs) {
     if (work.jobs.hasOwnProperty(job)) {
       $('#workExperience').append(HTMLworkStart);
@@ -111,7 +111,7 @@ function displayWork() {
     }
   }
 };
-displayWork();
+work.display ();
 
 $(document).click(function(loc) {
   var x = loc.pageX;
@@ -181,7 +181,7 @@ var education = {
   'onlineCourses': [{
     'title': 'Front End Nanodegree',
     'school': 'Udacity',
-    'dates': 'September 2015',
+    'date': 'Expected completion April 2016',
     'url': 'https//www.udacity.com/course/ud804'
   }]
 }
@@ -203,11 +203,11 @@ education.display = function() {
       $('#education').append(HTMLschoolStart);
       var formattedOnlineTitle = HTMLonlineTitle.replace('%data%', education.onlineCourses[i].title);
       var formattedOnlineSchool = HTMLonlineSchool.replace('%data%', education.onlineCourses[i].school);
-      var formattedOnlineDates = HTMLonlineDates.replace('%data%', education.onlineCourses[i].dates);
+      var formattedOnlineDate = HTMLonlineDates.replace('%data%', education.onlineCourses[i].date);
       var formattedOnlineURL = HTMLonlineURL.replace('%data%', 'Visit Website');
       var formattedOnlineLinkedURL = formattedOnlineURL.replace('#', education.onlineCourses[i].url);
 
-      $('.education-entry:last').append(formattedOnlineTitle, formattedOnlineSchool, formattedOnlineDates, formattedOnlineURL);
+      $('.education-entry:last').append(formattedOnlineTitle, formattedOnlineSchool, formattedOnlineDate, formattedOnlineURL);
     }
   }
 };

@@ -66,62 +66,24 @@ h5 {
 }
 
 h1, #name {
-<<<<<<< HEAD
     font-family: "Poiret One", cursive;
     color: #3b8686;
     font-size: 5em;
     background-color: #0e2430;
-||||||| merged common ancestors
-  font-family: 'Poiret One', cursive;
-  color: #3B8686;
-  font-size: 5em;
-  background-color: #0E2430;
-=======
-  font-family: 'Poiret One', cursive;
-  color: #3b8686;
-  font-size: 5em;
-  background-color: #0e2430;
->>>>>>> gh-pages
 }
 
 .flex-box, #skills-h3 {
-<<<<<<< HEAD
     background-color: #0e2430;
-||||||| merged common ancestors
-  background-color: #0E2430;
-=======
-  background-color: #0e2430;
->>>>>>> gh-pages
 }
 
 h1, #bio {
-<<<<<<< HEAD
     margin-left: 20px;
     background-color: #e8d5b7;
     color: #0e2430;
 }
-||||||| merged common ancestors
-  margin-left: 20px;
-  background-color: #E8D5B7;
-  color: #0E2430;
-  }
-
-=======
-  margin-left: 20px;
-  background-color: #e8d5b7;
-  color: #0e2430;
-  }
-
->>>>>>> gh-pages
 
 .flex-item {
-<<<<<<< HEAD
     background-color: #0e2430;
-||||||| merged common ancestors
-  background-color: #0E2430;
-=======
-  background-color: #0e2430;
->>>>>>> gh-pages
 }
 
 .date-text {
@@ -147,22 +109,10 @@ p {
 }
 
 a {
-<<<<<<< HEAD
     color: #1199c3;
     text-decoration: none;
     display: block;
     color: #0e2430;
-||||||| merged common ancestors
-  color: #1199c3;
-  text-decoration: none;
-  display: block;
-  color: #0E2430;
-=======
-  color: #1199c3;
-  text-decoration: none;
-  display: block;
-  color: #0e2430;
->>>>>>> gh-pages
 }
 
 .welcome-message {
@@ -173,52 +123,22 @@ a {
 }
 
 #topContacts {
-<<<<<<< HEAD
     background-color: #0e2430;
-||||||| merged common ancestors
-  background-color: #0E2430;
-=======
-  background-color: #0e2430;
->>>>>>> gh-pages
 }
 
 #skills-h3 {
-<<<<<<< HEAD
     color: #f5b349;
     display: none;
     margin-left: -20px;
     padding-top: 35px;
-||||||| merged common ancestors
-  color: #F5B349;
-  display: none;
-  margin-left: -20px;
-  padding-top: 35px;
-=======
-  color: #f5b349;
-  display: none;
-  margin-left: -20px;
-  padding-top: 35px;
->>>>>>> gh-pages
 }
 
 .orange {
-<<<<<<< HEAD
     background-color: #0e2430;
-||||||| merged common ancestors
-  background-color: #0E2430;
-=======
-  background-color: #0e2430;
->>>>>>> gh-pages
 }
 
 .orange-text {
-<<<<<<< HEAD
     color: #f5b349;
-||||||| merged common ancestors
-  color: #F5B349;
-=======
-  color: #f5b349;
->>>>>>> gh-pages
 }
 
 .white-text {
@@ -237,13 +157,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-<<<<<<< HEAD
     background-color: #0e2430;
-||||||| merged common ancestors
-  background-color: #0E2430;
-=======
-  background-color: #0e2430;
->>>>>>> gh-pages
 }
 
 .flex-box {
@@ -286,13 +200,7 @@ span {
 }
 
 #lets-connect h2 {
-<<<<<<< HEAD
     color: #f5b349;
-||||||| merged common ancestors
-  color: #F5B349;
-=======
-  color: #f5b349;
->>>>>>> gh-pages
 }
 
 /* Media queries to handle various device widths */
