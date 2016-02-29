@@ -170,7 +170,7 @@ var education = {
     'degree': 'BA',
     'majors': 'Photography',
     'dates': 'June 2002',
-    'url': 'Visit Site'
+    'url': 'Visit Website'
   }],
   'onlineCourses': [{
     'title': 'Front End Nanodegree',
