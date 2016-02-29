@@ -165,13 +165,6 @@ projects.display();
 //Education Object
 var education = {
   'schools': [{
-    'name': 'Keller Graduate School of Management',
-    'location': 'Tinley Park, Il',
-    'degree': 'MBA',
-    'majors': 'Marketing',
-    'dates': 'June 2010',
-    'url': 'https//www.keller.edu'
-  }, {
     'name': 'Columbia College Chicago',
     'location': 'Chicago, Il',
     'degree': 'BA',
@@ -195,7 +188,7 @@ education.display = function() {
     var formattedSchoolDegree = formattedName + formattedDegree;
     var formattedDates = HTMLschoolDates.replace('%data%', education.schools[i].dates);
     var formattedMajor = HTMLschoolMajor.replace('%data%', education.schools[i].majors);
-    var formattedURL = HTMLonlineURL.replace('%data%', education.schools[i].url);
+    var formattedURL = HTMLschoolURL.replace('%data%', education.schools[i].url);
     var formattedLinkedURL = formattedURL.replace('#', education.schools[i].url);
     var formattedLocation = HTMLschoolLocation.replace('%data%', education.schools[i].location);
     $('.education-entry:last').append(formattedSchoolDegree)
