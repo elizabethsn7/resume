@@ -170,7 +170,7 @@ var education = {
     'degree': 'BA',
     'majors': 'Photography',
     'dates': 'June 2002',
-    'url': 'https//www.colum.edu'
+    'url': 'Visit Site'
   }],
   'onlineCourses': [{
     'title': 'Front End Nanodegree',
@@ -189,12 +189,11 @@ education.display = function() {
     var formattedDates = HTMLschoolDates.replace('%data%', education.schools[i].dates);
     var formattedMajor = HTMLschoolMajor.replace('%data%', education.schools[i].majors);
     var formattedURL = HTMLschoolURL.replace('%data%', education.schools[i].url);
-    var formattedLinkedURL = formattedURL.replace('#', education.schools[i].url);
     var formattedLocation = HTMLschoolLocation.replace('%data%', education.schools[i].location);
     $('.education-entry:last').append(formattedSchoolDegree)
       .append(formattedDates)
       .append(formattedMajor)
-      .append(formattedLinkedURL)
+      .append(formattedURL)
       .append(formattedLocation);
   }
   if (education.onlineCourses.length > 0) {
