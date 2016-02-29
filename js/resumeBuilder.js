@@ -125,12 +125,12 @@ $(document).click(function(loc) {
 
 var projects = {
   'projects': [{
-    'title': 'Portfolio',
+    'titlePort': 'Portfolio',
     'dates': 'November 2015',
     'description': 'This is the first large project I completed in the Udacity Front End Wen Developer Nanodegree program. I made use of HTML, CSS, Modals and Bootstrap showcasing my photography and web development skills.',
-    'images': ['images/logo.png', 'images/shoes.png', 'images/lifestyle.png', 'images/product.png']
+    'images': ['images/logo.png', 'images/shoes.png', 'images/lifestyle.png', 'images/product.png'],
   }, {
-    'title': 'Modern, Timeless, Romantic or Glam Wedding Quiz',
+    'titleQuiz': 'Modern, Timeless, Romantic or Glam Wedding Quiz',
     'dates': 'August 2015',
     'description': 'I created a quiz app using HTML, CSS, JQuery and JavaScript featuring my wedding photography. I was able to create a landing page as well as a results page.',
     'images': ['images/projects-img-1.jpg', 'images/projects-img-2.jpg', 'images/projects-img-3.jpg', 'images/projects-img-4.jpg']
@@ -143,8 +143,8 @@ projects.display = function() {
     if (projects.projects.hasOwnProperty(project)) {
     $('#projects').append(HTMLprojectStart);
 
-    var formattedTitle = HTMLprojectTitle.replace('%data%', projects.projects[project].title);
-    $('.project-entry:last').append(formattedTitle);
+    var formattedPortTitle = HTMLprojectTitle.replace('%data%', projects.projects[project].titlePort);
+    $('.project-entry:last').append(formattedPortTitle);
 
     var formattedDates = HTMLprojectDates.replace('%data%', projects.projects[project].dates);
     $('.project-entry:last').append(formattedDates);
@@ -170,13 +170,11 @@ var education = {
     'degree': 'BA',
     'majors': 'Photography',
     'dates': 'June 2002',
-    'url': 'Visit Website'
   }],
   'onlineCourses': [{
     'title': 'Front End Nanodegree',
     'school': 'Udacity',
     'dates': 'September 2015',
-    'url': 'https//www.udacity.com'
   }],
 };
 education.display = function() {
@@ -188,7 +186,7 @@ education.display = function() {
     var formattedSchoolDegree = formattedName + formattedDegree;
     var formattedDates = HTMLschoolDates.replace('%data%', education.schools[i].dates);
     var formattedMajor = HTMLschoolMajor.replace('%data%', education.schools[i].majors);
-    var formattedURL = HTMLschoolURL.replace('%data%', education.schools[i].url);
+    var formattedURL = HTMLschoolURL.replace('%data%', 'Visit Website');
     var formattedLocation = HTMLschoolLocation.replace('%data%', education.schools[i].location);
     $('.education-entry:last').append(formattedSchoolDegree)
       .append(formattedDates)
