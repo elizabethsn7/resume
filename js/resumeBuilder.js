@@ -183,7 +183,7 @@ var education = {
     'title': 'Front End Nanodegree',
     'school': 'Udacity',
     'dates': 'September 2015',
-    'url': 'https//www.udacity.com/course/ud804'
+    'url': 'https//www.udacity.com'
   }],
 };
 education.display = function() {
