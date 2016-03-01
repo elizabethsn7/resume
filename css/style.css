@@ -25,7 +25,8 @@ h6 {
 }
 
 .work-entry, a{
-  color: orange;
+  color: #0e2430;
+  font-size: 15px;
 }
 
 
@@ -115,7 +116,6 @@ p {
 a {
   text-decoration: none;
   display: block;
-  color: #0e2430;
 }
 
 .welcome-message {
