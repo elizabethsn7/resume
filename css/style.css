@@ -24,9 +24,10 @@ h6 {
   padding: 6px 5%;
 }
 
-.work-entry, a {
+.work-entry, a{
   color: orange;
 }
+
 
 h1 {
   font-size: 40px;
@@ -112,7 +113,6 @@ p {
 }
 
 a {
-  color: #1199c3;
   text-decoration: none;
   display: block;
   color: #0e2430;

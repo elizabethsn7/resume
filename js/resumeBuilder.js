@@ -101,14 +101,19 @@ function displayWork() {
     $('#workExperience').append(HTMLworkStart);
     
       var formattedEmployer = HTMLworkEmployer.replace('%data%', work.jobs[job].employer);
-      var formattedWorkTitle = HTMLworkTitle.replace('%data%', work.jobs[job].title);
-      var formattedEmployerTitle = formattedEmployer + formattedWorkTitle;
-      $('work-entry:last').append(formattedEmployerTitle);
+      $('.work-entry:last').append(formattedEmployer)
 
-    var formattedWorkDates = HTMLworkDates.replace('%data%', work.jobs[job].dates);
-    var formattedWorkLocation = HTMLworkLocation.replace('%data%', work.jobs[job].location);
-    var formattedWorkDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
-    $('.work-entry:last').append(formattedWorkDates, formattedWorkLocation, formattedWorkDescription);
+      var formattedWorkTitle = HTMLworkTitle.replace('%data%', work.jobs[job].title);
+      $('.work-entry:last').append(formattedWorkTitle)
+
+      var formattedWorkDates = HTMLworkDates.replace('%data%', work.jobs[job].dates);
+      $('.work-entry:last').append(formattedWorkDates)
+
+      var formattedWorkLocation = HTMLworkLocation.replace('%data%', work.jobs[job].location);
+      $('.work-entry:last').append(formattedWorkLocation)
+      
+      var formattedWorkDescription = HTMLworkDescription.replace('%data%', work.jobs[job].description);
+      $('.work-entry:last').append(formattedWorkDescription);
     }
   }
 }
@@ -125,36 +130,36 @@ $(document).click(function(loc) {
 
 var projects = {
   'projects': [{
-    'titlePort': 'Portfolio',
+    'title': 'Portfolio',
     'dates': 'November 2015',
     'description': 'This is the first large project I completed in the Udacity Front End Wen Developer Nanodegree program. I made use of HTML, CSS, Modals and Bootstrap showcasing my photography and web development skills.',
-    'images': ['images/logo.png', 'images/shoes.png', 'images/lifestyle.png', 'images/product.png'],
+    'images': ['images/logo.png', 'images/shoes.png', 'images/lifestyle.png', 'images/product.png']
   }, {
-    'titleQuiz': 'Modern, Timeless, Romantic or Glam Wedding Quiz',
+    'title': 'Modern, Timeless, Romantic or Glam Wedding Quiz',
     'dates': 'August 2015',
     'description': 'I created a quiz app using HTML, CSS, JQuery and JavaScript featuring my wedding photography. I was able to create a landing page as well as a results page.',
     'images': ['images/projects-img-1.jpg', 'images/projects-img-2.jpg', 'images/projects-img-3.jpg', 'images/projects-img-4.jpg']
   }]
-};
+}
 
-// ** Projects Display **
 projects.display = function() {
   for (var project in projects.projects) {
     if (projects.projects.hasOwnProperty(project)) {
-    $('#projects').append(HTMLprojectStart);
+      $('#projects').append(HTMLprojectStart);
 
-    var formattedPortTitle = HTMLprojectTitle.replace('%data%', projects.projects[project].titlePort);
-    $('.project-entry:last').append(formattedPortTitle);
+      var formattedTitle = HTMLprojectTitle.replace('%data%', projects.projects[project].title);
+      $('.project-entry:last').append(formattedTitle);
 
-    var formattedDates = HTMLprojectDates.replace('%data%', projects.projects[project].dates);
-    $('.project-entry:last').append(formattedDates);
+      var formattedDates = HTMLprojectDates.replace('%data%', projects.projects[project].dates);
+      $('.project-entry:last').append(formattedDates);
 
-    var formattedDescription = HTMLprojectDescription.replace('%data%', projects.projects[project].description);
-    $('.project-entry:last').append(formattedDescription);
-    for  (var image in projects.projects[project].images) {
-      if (projects.projects[project].images.length > 0) {
-        var formattedImage = HTMLprojectImage.replace('%data%', projects.projects[project].images[image]);
-        $('.project-entry:last').append(formattedImage);
+      var formattedDescription = HTMLprojectDescription.replace('%data%', projects.projects[project].description);
+      $('.project-entry:last').append(formattedDescription);
+
+      for (var image in projects.projects[project].images) {
+        if (projects.projects[project].images.length > 0) {
+          var formattedImage = HTMLprojectImage.replace('%data%', projects.projects[project].images[image]);
+          $('.project-entry:last').append(formattedImage);
         }
       }
     }
